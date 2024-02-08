@@ -1,8 +1,15 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local ScreenGui = Instance.new("ScreenGui")
 local mage = Instance.new("Frame")
 local ImageLabel = Instance.new("ImageLabel")
 local ImageLabel_2 = Instance.new("ImageLabel")
 local TextButton = Instance.new("TextButton")
+
+--Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -12,15 +19,15 @@ mage.Parent = ScreenGui
 mage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 mage.BorderColor3 = Color3.fromRGB(0, 0, 0)
 mage.BorderSizePixel = 0
-mage.Position = UDim2.new(0.120291613, 0, 0.461240321, 0)
-mage.Size = UDim2.new(0, 110, 0, 39)
+mage.Position = UDim2.new(0.0668286756, 0, 0.437984496, 0)
+mage.Size = UDim2.new(0, 111, 0, 36)
 
 ImageLabel.Parent = mage
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0.0090909088, 0, 0, 0)
-ImageLabel.Size = UDim2.new(0, 109, 0, 39)
+ImageLabel.Position = UDim2.new(0, 0, 0.055555556, 0)
+ImageLabel.Size = UDim2.new(0, 116, 0, 34)
 ImageLabel.Image = "rbxassetid://16286943230"
 
 ImageLabel_2.Parent = ImageLabel
@@ -28,7 +35,7 @@ ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel_2.BorderSizePixel = 0
 ImageLabel_2.Position = UDim2.new(0.137614682, 0, 0, 0)
-ImageLabel_2.Size = UDim2.new(0, 35, 0, 39)
+ImageLabel_2.Size = UDim2.new(0, 35, 0, 34)
 ImageLabel_2.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
 
 TextButton.Parent = mage
@@ -45,7 +52,9 @@ TextButton.TextScaled = true
 TextButton.TextSize = 50.000
 TextButton.TextWrapped = true
 
-local function YCKFW_fake_script() -- ImageLabel_2.LocalScript 
+-- Scripts:
+
+local function ZGRM_fake_script() -- ImageLabel_2.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel_2)
 
 	local Players = game:getService("Players")
@@ -58,8 +67,8 @@ local function YCKFW_fake_script() -- ImageLabel_2.LocalScript
 	local imageLabel = script.Parent
 	imageLabel.Image = content
 end
-coroutine.wrap(YCKFW_fake_script)()
-local function CWRF_fake_script() -- ImageLabel_2.Script 
+coroutine.wrap(ZGRM_fake_script)()
+local function TGCBFJ_fake_script() -- ImageLabel_2.Script 
 	local script = Instance.new('Script', ImageLabel_2)
 
 	local Players = game:getService("Players")
@@ -72,11 +81,11 @@ local function CWRF_fake_script() -- ImageLabel_2.Script
 	local imageLabel = script.Parent
 	imageLabel.Image = content
 end
-coroutine.wrap(CWRF_fake_script)()
-local function QXJAHLY_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(TGCBFJ_fake_script)()
+local function INIW_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
-	
+	-- Script for closing a frame when a button is clicked
 	
 	local button = script.Parent  -- Assuming this script is a child of the button
 	local frame = button.Parent  -- Assuming the frame is the parent of the button
@@ -86,4 +95,4 @@ local function QXJAHLY_fake_script() -- TextButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(QXJAHLY_fake_script)()
+coroutine.wrap(INIW_fake_script)()
