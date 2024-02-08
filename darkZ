@@ -1,9 +1,16 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local EXECTXHEAD = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local TextButton = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
 local TextButton_2 = Instance.new("TextButton")
+
+--Properties:
 
 EXECTXHEAD.Name = "EXEC TX HEAD"
 EXECTXHEAD.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -58,35 +65,125 @@ TextButton_2.TextScaled = true
 TextButton_2.TextSize = 14.000
 TextButton_2.TextWrapped = true
 
-local function TUAQE_fake_script() -- TextButton.Script 
+-- Scripts:
+
+local function ZSPWGE_fake_script() -- TextButton.Script 
 	local script = Instance.new('Script', TextButton)
 
+	local LocalPlayer = game:GetService("Players").LocalPlayer
+	local Character = LocalPlayer.Character
+	local Humanoid = Character:FindFirstChildOfClass("Humanoid")
 	
-	for i,v in pairs(game.Players.LocalPlayer.Character.Humanoid:GetChildren()) do
-		if string.find(v.Name,"Scale") and v.Name ~= "HeadScale" then
-			repeat wait(HeadGrowSpeed) until game.Players.LocalPlayer.Character.Head:FindFirstChild("OriginalSize")
-			game.Players.LocalPlayer.Character.Head.OriginalSize:Destroy()
-			v:Destroy()
-			game.Players.LocalPlayer.Character.Head:WaitForChild("OriginalSize")
+	function rm()
+		for i,v in pairs(Character:GetDescendants()) do
+			if v:IsA("BasePart") then
+				if v.Name == "Handle" or v.Name == "Head" then
+					if Character.Head:FindFirstChild("OriginalSize") then
+						Character.Head.OriginalSize:Destroy()
+					end
+				else
+					for i,cav in pairs(v:GetDescendants()) do
+						if cav:IsA("Attachment") then
+							if cav:FindFirstChild("OriginalPosition") then
+								cav.OriginalPosition:Destroy()  
+							end
+						end
+					end
+					v:FindFirstChild("OriginalSize"):Destroy()
+					if v:FindFirstChild("AvatarPartScaleType") then
+						v:FindFirstChild("AvatarPartScaleType"):Destroy()
+					end
+				end
+			end
 		end
 	end
+	
+	rm()
+	wait(0.5)
+	Humanoid:FindFirstChild("BodyProportionScale"):Destroy()
+	wait(1)
+	
+	rm()
+	wait(0.5)
+	Humanoid:FindFirstChild("BodyHeightScale"):Destroy()
+	wait(1)
+	
+	rm()
+	wait(0.5)
+	Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
+	wait(1)
+	
+	rm()
+	wait(0.5)
+	Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
+	wait(1)
+	
+	rm()
+	wait(0.5)
+	Humanoid:FindFirstChild("HeadScale"):Destroy()
+	wait(1)
+	
 end
-coroutine.wrap(TUAQE_fake_script)()
-local function QGMVC_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(ZSPWGE_fake_script)()
+local function XFYFNEH_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
+	local LocalPlayer = game:GetService("Players").LocalPlayer
+	local Character = LocalPlayer.Character
+	local Humanoid = Character:FindFirstChildOfClass("Humanoid")
 	
-	for i,v in pairs(game.Players.LocalPlayer.Character.Humanoid:GetChildren()) do
-		if string.find(v.Name,"Scale") and v.Name ~= "HeadScale" then
-			repeat wait(HeadGrowSpeed) until game.Players.LocalPlayer.Character.Head:FindFirstChild("OriginalSize")
-			game.Players.LocalPlayer.Character.Head.OriginalSize:Destroy()
-			v:Destroy()
-			game.Players.LocalPlayer.Character.Head:WaitForChild("OriginalSize")
+	function rm()
+		for i,v in pairs(Character:GetDescendants()) do
+			if v:IsA("BasePart") then
+				if v.Name == "Handle" or v.Name == "Head" then
+					if Character.Head:FindFirstChild("OriginalSize") then
+						Character.Head.OriginalSize:Destroy()
+					end
+				else
+					for i,cav in pairs(v:GetDescendants()) do
+						if cav:IsA("Attachment") then
+							if cav:FindFirstChild("OriginalPosition") then
+								cav.OriginalPosition:Destroy()  
+							end
+						end
+					end
+					v:FindFirstChild("OriginalSize"):Destroy()
+					if v:FindFirstChild("AvatarPartScaleType") then
+						v:FindFirstChild("AvatarPartScaleType"):Destroy()
+					end
+				end
+			end
 		end
 	end
+	
+	rm()
+	wait(0.5)
+	Humanoid:FindFirstChild("BodyProportionScale"):Destroy()
+	wait(1)
+	
+	rm()
+	wait(0.5)
+	Humanoid:FindFirstChild("BodyHeightScale"):Destroy()
+	wait(1)
+	
+	rm()
+	wait(0.5)
+	Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
+	wait(1)
+	
+	rm()
+	wait(0.5)
+	Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
+	wait(1)
+	
+	rm()
+	wait(0.5)
+	Humanoid:FindFirstChild("HeadScale"):Destroy()
+	wait(1)
+	
 end
-coroutine.wrap(QGMVC_fake_script)()
-local function BUWMEKA_fake_script() -- Frame.Script 
+coroutine.wrap(XFYFNEH_fake_script)()
+local function IZQBC_fake_script() -- Frame.Script 
 	local script = Instance.new('Script', Frame)
 
 	frame = script.Parent.Frame
@@ -94,8 +191,8 @@ local function BUWMEKA_fake_script() -- Frame.Script
 	frame.Active = true
 	frame.Selectable = true
 end
-coroutine.wrap(BUWMEKA_fake_script)()
-local function CSJQPE_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(IZQBC_fake_script)()
+local function RXML_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	-- Script for closing a frame when a button is clicked
@@ -108,4 +205,4 @@ local function CSJQPE_fake_script() -- TextButton_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(CSJQPE_fake_script)()
+coroutine.wrap(RXML_fake_script)()
