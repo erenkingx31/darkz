@@ -1,15 +1,9 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local ScreenGui = Instance.new("ScreenGui")
 local mage = Instance.new("Frame")
 local ImageLabel = Instance.new("ImageLabel")
 local ImageLabel_2 = Instance.new("ImageLabel")
 local TextButton = Instance.new("TextButton")
 
---Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -19,14 +13,14 @@ mage.Parent = ScreenGui
 mage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 mage.BorderColor3 = Color3.fromRGB(0, 0, 0)
 mage.BorderSizePixel = 0
-mage.Position = UDim2.new(0.0668286756, 0, 0.437984496, 0)
+mage.Position = UDim2.new(0.0838396102, 0, 0.383720934, 0)
 mage.Size = UDim2.new(0, 111, 0, 36)
 
 ImageLabel.Parent = mage
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0, 0, 0.055555556, 0)
+ImageLabel.Position = UDim2.new(0, 0, -0.027777778, 0)
 ImageLabel.Size = UDim2.new(0, 116, 0, 34)
 ImageLabel.Image = "rbxassetid://16286943230"
 
@@ -52,9 +46,7 @@ TextButton.TextScaled = true
 TextButton.TextSize = 50.000
 TextButton.TextWrapped = true
 
--- Scripts:
-
-local function ZGRM_fake_script() -- ImageLabel_2.LocalScript 
+local function TOTG_fake_script() -- ImageLabel_2.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel_2)
 
 	local Players = game:getService("Players")
@@ -67,8 +59,8 @@ local function ZGRM_fake_script() -- ImageLabel_2.LocalScript
 	local imageLabel = script.Parent
 	imageLabel.Image = content
 end
-coroutine.wrap(ZGRM_fake_script)()
-local function TGCBFJ_fake_script() -- ImageLabel_2.Script 
+coroutine.wrap(TOTG_fake_script)()
+local function RLEIMSU_fake_script() -- ImageLabel_2.Script 
 	local script = Instance.new('Script', ImageLabel_2)
 
 	local Players = game:getService("Players")
@@ -81,12 +73,10 @@ local function TGCBFJ_fake_script() -- ImageLabel_2.Script
 	local imageLabel = script.Parent
 	imageLabel.Image = content
 end
-coroutine.wrap(TGCBFJ_fake_script)()
-local function INIW_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(RLEIMSU_fake_script)()
+local function ZCNHPQ_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
-	-- Script for closing a frame when a button is clicked
-	
 	local button = script.Parent  -- Assuming this script is a child of the button
 	local frame = button.Parent  -- Assuming the frame is the parent of the button
 	
@@ -95,4 +85,4 @@ local function INIW_fake_script() -- TextButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(INIW_fake_script)()
+coroutine.wrap(ZCNHPQ_fake_script)()
